@@ -9,7 +9,7 @@ module.exports = function validateExperinceInputs(data) {
     data.from = !isEmpty(data.from) ? data.from : ''; 
 
     if(Validator.isEmpty(data.title)) {
-        errors.titile = 'Job title field is required';
+        errors.title = 'Job title field is required';
     }
 
     if(Validator.isEmpty(data.company)) {

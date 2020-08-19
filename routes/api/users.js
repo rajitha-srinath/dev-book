@@ -18,7 +18,7 @@ const User = require('../../models/User');
 //@access   Public
 router.get('/test', (req, res) => res.json({msg: 'User works...'}));
 
-// @route    GET api/users/register
+// @route    POSTxx api/users/register
 // @des      Register users
 // @access   Public
 router.post('/register', (req, res) => {
@@ -86,10 +86,10 @@ router.post('/login', (req, res) => {
                 .then(isMatch => {
                 if(isMatch) {
                    // User Match
-                    const payload = { id: user._id, name: user.name }
+                    const payload = { id: user._id, name: user.name, avatar: user.avatar }
 
                    // Sign Token
-                   jwt.sign(payload, keys.secretOrKey, { expiresIn: 36000 }, (err, token) => {
+                   jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                        res.json({
                            success: true,
                            token: 'Bearer ' + token
