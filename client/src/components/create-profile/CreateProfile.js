@@ -185,7 +185,7 @@ class CreateProfile extends Component {
                                     value={this.state.skills}
                                     onChange={this.onChange}
                                     error={errors.skills}
-                                    // info="A unique handle for your profile URL. Your full name, company name, nickname"
+                                    info="Please use comma, separated values (eg. HTML, CSS, PHP)"
                                 />
                                 <TextFieldGroup 
                                     placeholder="Github Username"
