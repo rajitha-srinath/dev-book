@@ -6,3 +6,6 @@ npm install
 
 # run
 npm run dev
+
+# technologies used
+MERN stack
